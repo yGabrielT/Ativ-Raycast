@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Shoot : MonoBehaviour
 {
     [SerializeField]
@@ -39,6 +40,10 @@ public class Shoot : MonoBehaviour
             Debug.Log("Você atingiu o inimigo");
             isShooted = true;
             Destroy(hit.transform.gameObject);
+        }
+        else
+        {
+            isShooted=false;
         }
     }
 }
