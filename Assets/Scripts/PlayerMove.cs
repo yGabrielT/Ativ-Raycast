@@ -13,12 +13,14 @@ public class PlayerMove : MonoBehaviour
     private float gravityValue = -9.81f;
     public LayerMask ground;
     public Transform PlayerCam;
+    private Transform camera;
 
     private void Start()
     {
         controller = gameObject.GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        camera = Camera.main.transform;
     }
 
     void Update()
@@ -30,7 +32,9 @@ public class PlayerMove : MonoBehaviour
             playerVelocity.y = 0f;
         }
 
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
+        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        move = camera.forward * move.z + camera.right * move.x;
+        move.y = 0f;
         controller.Move(move * Time.deltaTime * playerSpeed);
 
         if (move != Vector3.zero)
