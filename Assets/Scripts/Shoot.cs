@@ -6,6 +6,8 @@ using UnityEngine;
 public class Shoot : MonoBehaviour
 {
     [SerializeField]
+    private Animator shoot;
+    [SerializeField]
     private Transform ArmaPos;
     [SerializeField]
     private LayerMask inimigo;
@@ -28,6 +30,7 @@ public class Shoot : MonoBehaviour
 
             Debug.DrawRay(ray.origin, ray.direction * 100f, Color.green);
             inimigoAtingido = true;
+            
             
         }
         else
