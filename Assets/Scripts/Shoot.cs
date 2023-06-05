@@ -39,6 +39,8 @@ public class Shoot : MonoBehaviour
         }
         if (inimigoAtingido == true && Input.GetMouseButtonDown(0))
         {
+            shoot.SetTrigger("Shoot");
+            shoot.ResetTrigger("Cooldown");
             if(hit.collider.gameObject.CompareTag("Inimigo"))
             Debug.Log("Você atingiu o inimigo");
             isShooted = true;
@@ -46,7 +48,9 @@ public class Shoot : MonoBehaviour
         }
         else
         {
-            isShooted=false;
+            shoot.ResetTrigger("Shoot");
+            shoot.SetTrigger("Cooldown");
+            isShooted =false;
         }
     }
 }
