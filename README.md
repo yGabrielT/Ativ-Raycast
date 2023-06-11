@@ -3,7 +3,9 @@ Colaboradores: Gustavo S.S, Gabriel T.D.  Atividade de desenvolvimento Raycast e
 
 
 -=====================================================- 
+
 ((-- Conceitos sobre a cena da Atividade - Raycast --))
+
 -=====================================================-
 
 Fizemos a nossa cena como referencia ao jogo Aimlab, onde é um treino de mira com um sistema de pontuação.
