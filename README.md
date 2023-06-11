@@ -14,7 +14,8 @@ Nessa cena utilizamos directional light para iluminação pegar toda a cena, uti
 Para as Prefabs usamos a bala e as esferas para pontuação, agora nos scripts o raycast foi implementado para ao alvo sofrer o contato da bala marcar como acerto e marcar a pontuação. Nos scripts também contém o dano dos inimigos o Spawn ao decorrer da eliminação dos alvos a movimentação do personagem e a câmera e a iluminação do ambiente, tendo também o sistema de pontuação.
 
 Imagens:
+![image](https://github.com/yGabrielT/Ativ-Raycast/assets/95586355/eb0f1a2a-94b4-4452-8ab1-e6b08dd393ef)
 
-![Raycast](https://github.com/yGabrielT/Ativ-Raycast/assets/126109657/fdf96989-c169-431e-a126-4120051c4d47)
-![Raycast](https://github.com/yGabrielT/Ativ-Raycast/assets/126109657/2e76b2d0-0927-4011-8a28-42a8754fd5cc)
-![Raycast](https://github.com/yGabrielT/Ativ-Raycast/assets/126109657/8340eab9-91d7-4827-b83e-e4305cf2aaf9)
+![image](https://github.com/yGabrielT/Ativ-Raycast/assets/95586355/5560c3f9-5e5f-487e-9d5c-0c6c032f02fa)
+
+![ezgif com-optimize (1)](https://github.com/yGabrielT/Ativ-Raycast/assets/95586355/539cf51f-ead0-4f2c-86c2-158bf93f5dfb)
