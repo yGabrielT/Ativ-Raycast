@@ -13,4 +13,4 @@ Para as Prefabs usamos a bala e as esferas para pontuação, agora nos scripts o
 
 
 
-Imagens:
+
