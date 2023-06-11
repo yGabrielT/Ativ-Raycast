@@ -9,9 +9,10 @@ public class SpawnInimigos : MonoBehaviour
     [SerializeField]
     private GameObject prefab;
     
-    // Start is called before the first frame update
+   
     void Start()
     {
+        // Seleciona aleatoriamente o XY dos inimigos e instancia no começo 
        for (int i = 0; i < 10; i++)
         {
             int x = UnityEngine.Random.Range(-10, 10);
@@ -23,9 +24,9 @@ public class SpawnInimigos : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //Instancia 10 inimigos quando 10 inimigos são eliminados 
         if (MudarTexto.spawnCount == 10)
         {
             MudarTexto.spawnCount = 0;

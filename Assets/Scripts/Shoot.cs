@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 
 public class Shoot : MonoBehaviour
@@ -11,6 +12,7 @@ public class Shoot : MonoBehaviour
     private Transform ArmaPos;
     [SerializeField]
     private LayerMask inimigo;
+    private CinemachineImpulseSource impulse;
     public GameObject objBullet;
     private float distanceMax = 100f;
     public float projVel;
@@ -18,15 +20,10 @@ public class Shoot : MonoBehaviour
     public bool inimigoAtingido = false;
     public static bool isShooted = false;
     public Transform PontoOrigem;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
+        // Gera Raycast a partir do centro da camera
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if (Physics.Raycast(ray.origin, ray.direction, out hit, distanceMax))
@@ -34,6 +31,7 @@ public class Shoot : MonoBehaviour
 
             Debug.DrawRay(ray.origin, ray.direction * 100f, Color.green);
             inimigoAtingido = true;
+            // Armazena ponto atingido em uma outra variavel
             PontoFinal = hit.point;
             
         }
@@ -43,13 +41,14 @@ public class Shoot : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0))
         {
+            //Instancia a bala e ativa animação
             InstaciarBala();
             shoot.SetTrigger("Shoot");
             shoot.ResetTrigger("Cooldown");
 
             if (inimigoAtingido == true)
             {
-                
+                //Caso encontre um inimigo o destroi
                 if (hit.collider.gameObject.CompareTag("Inimigo"))
                 {
                     Debug.Log("Você atingiu o inimigo");
@@ -74,10 +73,11 @@ public class Shoot : MonoBehaviour
         }
 
     }
-
+    //Instanciando a bala
     private void InstaciarBala()
     {
         var projectOBJ = Instantiate(objBullet, PontoOrigem.position, Quaternion.identity);
         projectOBJ.GetComponent<Rigidbody>().velocity = (PontoFinal - PontoOrigem.position).normalized * projVel;
+        Destroy(projectOBJ, .1f);
     }
 }

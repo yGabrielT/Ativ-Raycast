@@ -21,14 +21,14 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.302
+    m_Value: 0.398
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.364
+    m_Value: 0.606
   rounded:
     m_OverrideState: 1
-    m_Value: 1
---- !u!114 &-7844145351986418329
+    m_Value: 0
+--- !u!114 &-8636987855966488295
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,22 +37,44 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccf1aba9553839d41ae37dd52e9ebcce, type: 3}
-  m_Name: MotionBlur
+  m_Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
+  m_Name: Bloom
   m_EditorClassIdentifier: 
   active: 1
-  mode:
+  skipIterations:
     m_OverrideState: 0
-    m_Value: 0
-  quality:
-    m_OverrideState: 1
     m_Value: 1
+  threshold:
+    m_OverrideState: 1
+    m_Value: 1.23
   intensity:
     m_OverrideState: 1
-    m_Value: 0.091
+    m_Value: 3.81
+  scatter:
+    m_OverrideState: 0
+    m_Value: 0.7
   clamp:
-    m_OverrideState: 1
-    m_Value: 0.115
+    m_OverrideState: 0
+    m_Value: 65472
+  tint:
+    m_OverrideState: 0
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  highQualityFiltering:
+    m_OverrideState: 0
+    m_Value: 0
+  downscale:
+    m_OverrideState: 0
+    m_Value: 0
+  maxIterations:
+    m_OverrideState: 0
+    m_Value: 6
+  dirtTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+    dimension: 1
+  dirtIntensity:
+    m_OverrideState: 0
+    m_Value: 0
 --- !u!114 &-4039884660860425350
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -297,53 +319,6 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
---- !u!114 &-2387253935447248826
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
-  m_Name: Bloom
-  m_EditorClassIdentifier: 
-  active: 1
-  skipIterations:
-    m_OverrideState: 0
-    m_Value: 1
-  threshold:
-    m_OverrideState: 1
-    m_Value: 0.8
-  intensity:
-    m_OverrideState: 1
-    m_Value: 0.64
-  scatter:
-    m_OverrideState: 1
-    m_Value: 0.73
-  clamp:
-    m_OverrideState: 1
-    m_Value: 65475.33
-  tint:
-    m_OverrideState: 1
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
-  highQualityFiltering:
-    m_OverrideState: 0
-    m_Value: 0
-  downscale:
-    m_OverrideState: 0
-    m_Value: 0
-  maxIterations:
-    m_OverrideState: 0
-    m_Value: 6
-  dirtTexture:
-    m_OverrideState: 0
-    m_Value: {fileID: 2800000, guid: 6ace62d30f494c948b71d5594afce11d, type: 3}
-    dimension: 1
-  dirtIntensity:
-    m_OverrideState: 0
-    m_Value: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,96 +332,7 @@ MonoBehaviour:
   m_Name: Global Volume Profile
   m_EditorClassIdentifier: 
   components:
-  - {fileID: -2387253935447248826}
+  - {fileID: -8636987855966488295}
   - {fileID: -8774218210561610537}
   - {fileID: -4039884660860425350}
-  - {fileID: 7360721117612564953}
   - {fileID: -3277440013292971672}
-  - {fileID: -7844145351986418329}
-  - {fileID: 3957469892090348127}
---- !u!114 &3957469892090348127
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c01700fd266d6914ababb731e09af2eb, type: 3}
-  m_Name: DepthOfField
-  m_EditorClassIdentifier: 
-  active: 1
-  mode:
-    m_OverrideState: 1
-    m_Value: 2
-  gaussianStart:
-    m_OverrideState: 1
-    m_Value: 39.43
-  gaussianEnd:
-    m_OverrideState: 1
-    m_Value: 60.28
-  gaussianMaxRadius:
-    m_OverrideState: 1
-    m_Value: 0.5
-  highQualitySampling:
-    m_OverrideState: 1
-    m_Value: 1
-  focusDistance:
-    m_OverrideState: 1
-    m_Value: 34.9
-  aperture:
-    m_OverrideState: 1
-    m_Value: 32
-  focalLength:
-    m_OverrideState: 1
-    m_Value: 82.4
-  bladeCount:
-    m_OverrideState: 1
-    m_Value: 6
-  bladeCurvature:
-    m_OverrideState: 1
-    m_Value: 0
-  bladeRotation:
-    m_OverrideState: 1
-    m_Value: -138.2
---- !u!114 &7360721117612564953
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdfbdbb87d3286943a057f7791b43141, type: 3}
-  m_Name: ChannelMixer
-  m_EditorClassIdentifier: 
-  active: 0
-  redOutRedIn:
-    m_OverrideState: 1
-    m_Value: -200
-  redOutGreenIn:
-    m_OverrideState: 1
-    m_Value: -200
-  redOutBlueIn:
-    m_OverrideState: 1
-    m_Value: -200
-  greenOutRedIn:
-    m_OverrideState: 1
-    m_Value: -11
-  greenOutGreenIn:
-    m_OverrideState: 1
-    m_Value: 200
-  greenOutBlueIn:
-    m_OverrideState: 1
-    m_Value: -129
-  blueOutRedIn:
-    m_OverrideState: 1
-    m_Value: -200
-  blueOutGreenIn:
-    m_OverrideState: 1
-    m_Value: -200
-  blueOutBlueIn:
-    m_OverrideState: 1
-    m_Value: -200

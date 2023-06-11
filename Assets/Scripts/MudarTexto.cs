@@ -9,16 +9,15 @@ public class MudarTexto : MonoBehaviour
     public TextMeshProUGUI pont;
     public static int pontuacao;
     public static int spawnCount = 0;
-    // Start is called before the first frame update
+
     void Start()
     {
         pont.text = "Pontuação: ";
     }
 
-    // Update is called once per frame
     void Update()
     {
-       
+       // Aumenta a pontuação quando a variavél isShooted do shoot é ativada
         if (Shoot.isShooted)
         {
             spawnCount++;
