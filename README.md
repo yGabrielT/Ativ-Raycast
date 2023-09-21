@@ -1,5 +1,12 @@
 # Ativ-Raycast
-Colaboradores: Gustavo S.S, Gabriel T.D.  Atividade de desenvolvimento Raycast em Unity.
+Colaboradores: 
+
+Gustavo Severo Silva
+> GitHub .[@GSPMSilva](https://github.com/GSPMSilva).&nbsp;&middot;&nbsp; 
+Gabriel Trindade
+> GitHub .[@yGabrielT](https://github.com/yGabrielT).&nbsp;&middot;&nbsp;  
+
+Atividade de desenvolvimento Raycast em Unity.
 
 
 -=====================================================- 
