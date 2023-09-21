@@ -3,6 +3,7 @@ Colaboradores:
 
 Gustavo Severo Silva
 > GitHub .[@GSPMSilva](https://github.com/GSPMSilva).&nbsp;&middot;&nbsp; 
+
 Gabriel Trindade
 > GitHub .[@yGabrielT](https://github.com/yGabrielT).&nbsp;&middot;&nbsp;  
 
